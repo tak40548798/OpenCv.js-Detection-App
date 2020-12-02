@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="compareImage.js"></script>
+
+</head>
+<style>
+    #oneImageDiv {
+        overflow: hidden;
+        display: flex;
+        position: relative;
+        width: 50%;
+        height: auto;
+        margin: auto;
+        background-color: black;
+            
+    }
+
+    #oneImage {
+        backface-visibility: hidden;
+        cursor: pointer;
+        width: 100%;
+        height: auto;
+        left: 0px;
+        top: 0px;
+        position: relative;
+    }
+
+    #thumbnail {
+
+        width: 75%;
+        display: flex;
+        align-items: center;
+        margin: 50px auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+
+    .thumbnailImg {
+
+        cursor: pointer;
+        
+        margin: auto;
+        padding: 10px;
+        display: flex;
+        height: calc(100vh * 0.25);
+        align-items: baseline;
+        flex-direction: column;
+        
+    }
+
+    #thumbnail img{
+
+        height: calc(100vh * 0.2);
+
+    }
+
+    #compareDiv1{
+
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 30px auto;
+
+    }
+
+    .compareDiv {
+        overflow: hidden;
+        display: flex;
+        position: relative;
+        width: 50%;
+        margin: auto;
+        /* border: 1px white solid; */
+
+    }
+
+    .compareImg {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        transform: scale(1.0);
+        
+        width: 100%;
+    }
+
+
+
+
+</style>
+
+<body style="margin: 0px;">
+    <div style="width: 100%;display: flex;">
+        <div style="margin: auto;width:75%">
+            <div style="display: inline-block;">
+                <a style="font-size: 24px;" href="index.html">index</a>
+
+            </div>
+            <div style="display: inline-block;">
+                <a style="font-size: 24px;" href="viewImage.html">viewImage</a>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <div style="background-color: black;">
+        <div id="oneImageDiv">
+            <img id="oneImage" src="img/black.jpg" >
+    
+            </img>
+        </div>
+
+
+        <div id="compareDiv1" style="display: none">
+        <!-- <div class="compareDiv">
+
+			<img class="compareImg" src="img/flower.webp" >
+
+		</div>
+		<div class="compareDiv">
+
+			<img class="compareImg" src="img/flower.webp">
+
+		</div>
+		<div class="compareDiv">
+
+			<img class="compareImg" src="img/flower.webp" style="width: 100%">
+
+		</div> -->
+        </div>
+
+
+    </div>
+    
+    <div style="display:flex;">
+
+        <div style="margin:auto">
+            <input style="cursor: pointer" type="range" min="10" max="60" value="10" id="zoomSlider" class="slider">
+
+            <div style="float: left;" id="zoomNumber">1.0X</div>
+
+            <button id='clear' style="margin: 10px;cursor: pointer">clear</button>
+
+            <button id="rotate" style="margin: 10px;cursor: pointer">rotate</button>
+
+        </div>
+
+    </div>
+
+    <div style="display:flex;margin-bottom: 20px;">
+
+        <div style="margin:auto">
+
+            <div style="display: inline-block;margin: auto 10px;">
+                <input id="compareBox" type="checkbox">
+                <span>比較圖片開啟</span>
+            </div>
+            <div style="display: inline-block;margin: auto 10px;">
+                <select name="questionNumber" id="questionNumber">
+                    <option disabled selected="selected">選擇題目號碼</option>
+                </select>
+                <span>選擇題目</span>
+            </div>
+            <div style="display: inline-block;margin: auto 10px;">
+                <select name="compareNumber" id="compareNumber">
+                    <option value="1">1</option>
+                    <option value="2" selected="selected">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <span>選擇數量</span>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+    <div id="thumbnail">
+
+    </div>
+
+
+</body>
+
+</html>

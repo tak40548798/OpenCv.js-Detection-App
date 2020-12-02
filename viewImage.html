@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="viewImge.js"></script>
+</head>
+
+<style>
+
+    
+    #viewImage {
+        width: 80%;
+        /* height: 100vh; */
+        display: flex;
+        align-items: center;
+        /* justify-content:space-around; */
+        margin: 50px auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .imgFolder {
+        cursor: pointer;
+        margin: auto;
+        display: flex;
+        height: calc(100vh * 0.35);
+        align-items: baseline;
+        flex-direction:column;
+    }
+
+    .imgDiv {
+        margin: auto;
+        display: flex;
+        height: calc(100vh * 0.35);
+        align-items: baseline;
+        flex-direction:column;
+    }
+
+    img {
+        cursor: pointer;
+        height: calc(100vh * 0.3);
+    }
+
+    .pathBtn{
+        cursor: pointer;
+        background-color:darkgrey;
+        display: inline;
+        padding: 8px;
+        margin-right: 8px;
+        border-radius: 8px;
+    }
+
+</style>
+
+<body style="margin: 0px;">
+
+    <div style="width: 100%;display: flex;margin-top: 5px;">
+        <div style="margin: auto;width:70%">
+            <div style="text-align:left;">
+                <a style="font-size: 24px;" href="index.html">index</a>
+                <button id="delete">Delete</button>
+            </div>
+            <div id="Breadcrumb" style="text-align:left;margin-top: 18px;font-size: 24px;" >
+        
+            </div>
+        </div>
+    </div>
+    <canvas style="display: none;" id='noneImg'>
+
+    </canvas>
+    
+    <div id="viewImage">
+
+
+    </div>
+
+</body>
+
+</html>
