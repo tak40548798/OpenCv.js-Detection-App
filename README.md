@@ -69,26 +69,6 @@ https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html
 
 影片
 https://youtu.be/1dPYB-X2DPU
+
 [![](http://img.youtube.com/vi/1dPYB-X2DPU/0.jpg)](http://www.youtube.com/watch?v=1dPYB-X2DPU "")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
