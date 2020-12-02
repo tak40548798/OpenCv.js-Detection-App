@@ -6,18 +6,11 @@
 
 ### 影片
 
-用opencv辨識每一個frame並且繪製到canvas上
-
-在繪製到canvas上之前如果辨識結果有缺失(比如被手擋住)，結果不符合預期
-
-根據已辨識出來的內容將，座標盡可能補齊，然後呈現
-
-並且會將畫面中的矩形格子從左到右從上到下排列
+用opencv辨識每一個frame並且繪製到canvas上，在繪製到canvas上之前如果辨識結果有缺失(比如被手擋住)，導致結果不符合預期，會根據已辨識出來的內容將，座標盡可能補齊，然後呈現出來。
 
 https://youtu.be/JhwWStJe5N0
 
 [![](http://img.youtube.com/vi/JhwWStJe5N0/0.jpg)](http://www.youtube.com/watch?v=JhwWStJe5N0 "")
-
 
 #### 辨識方式
 
@@ -49,6 +42,7 @@ https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html
 
 如果輪廓的數量不符合我們的預期，就會根據已知的矩形的座標相對位置，反推出缺失的矩形位置，所以即使畫面受到干擾，比如手擋住，造成辨識錯誤，也能在一定的狀況，反補缺失的矩形座標。
 
+需要改進的是，在補正的過程中，寫了了大量的分支判斷，簡單說就是一堆的if和else，以及一堆些座標計算的邏輯，來確認各種可能，這個問題有很大的程度上是可以進行優化的，
 
 <img src="https://i.imgur.com/6kLmvqA.jpg" width="600" />辨識的結果
 
