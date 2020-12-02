@@ -1,8 +1,6 @@
 # OpenCV.js 辨識應用
 
-## 原理說明
-
-## opencv.js 辨別紙張上的矩形區域
+## 辨別紙張上的矩形區域
 
 ### 影片
 
@@ -11,6 +9,8 @@
 https://youtu.be/JhwWStJe5N0
 
 [![](http://img.youtube.com/vi/JhwWStJe5N0/0.jpg)](http://www.youtube.com/watch?v=JhwWStJe5N0 "")
+
+## 原理說明
 
 #### 辨識方式
 
@@ -52,7 +52,7 @@ https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html
 最後根據座標繪製結果，將串流影片中的每個frame(每個圖片)，繪製到canvas上就會變成Real Time辨識的樣子。
 
 
-## opencv.js 辨識結果座標製作圖片比較功能
+## 辨識結果座標製作圖片比較功能
 
 當User從影片串流當中截取圖片時，會將圖片儲存在File System，而座標辨識資料則會存在Local Storage，即使網頁關閉資料依舊會存在於瀏覽器中。
 
@@ -61,7 +61,7 @@ https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html
 所以User可以選擇1號考卷的B號題目(矩形區域)和2號考卷B號題目(矩形區域)做比較，依靠座標位置和CSS來達到這個功能。
 
 
-影片
+### 影片
 https://youtu.be/1dPYB-X2DPU
 
 [![](http://img.youtube.com/vi/1dPYB-X2DPU/0.jpg)](http://www.youtube.com/watch?v=1dPYB-X2DPU "")
